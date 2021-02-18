@@ -77,7 +77,7 @@ class App extends React.Component {
 
 
     var pathArr = window.location.pathname.split('/');
-    var id = pathArr[pathArr.length - 1];
+    var id = pathArr[pathArr.length - 1] || 1;
 
     axios.get(`/api/carousel-module/photos/${id}`)
       .then(res => {
@@ -88,7 +88,6 @@ class App extends React.Component {
           photos[i].photoId = photoId;
           photoId++;
         }
-
         this.setState({
           data: res,
           listing: res.data[0]

@@ -11,8 +11,8 @@
     "seed": "node database/seed.js",
     "start": "nodemon ./server/index.js",
     "build": "webpack -d –-watch",
-    "start:pm2": "pm2 start server/index.js",
-    "stop:pm2": "pm2 stop server/index.js",
+    "start:pm2": "pm2 start server/index.js photos",
+    "stop:pm2": "pm2 stop photos",
     "test": "jest"
   },
   "dependencies": {
